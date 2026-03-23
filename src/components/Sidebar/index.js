@@ -9,18 +9,18 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Sidebar = () => (
     <div className="nav-bar">
-        <Link className="logo" to="/">
+                <Link className="logo" to="/home">
             <img src={LogoS} alt="logo" />
             <img className="sub-logo" src={LogoSubtitle} alt="glushko" />
         </Link>
         <nav>
-        <NavLink activeclassname="active" to="/">
+                <NavLink className={({ isActive }) => (isActive ? 'active' : '')} to="/home">
          <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
         </NavLink>
-    <NavLink activeclassname="active" className="about-link" to="/about">
+        <NavLink className={({ isActive }) => `about-link ${isActive ? 'active' : ''}`} to="/about">
   <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
     </NavLink>
-    <NavLink activeclassname="active" className="contact-link" to="/contact">
+        <NavLink className={({ isActive }) => `contact-link ${isActive ? 'active' : ''}`} to="/contact">
   <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
     </NavLink>
 

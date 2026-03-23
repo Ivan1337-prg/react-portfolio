@@ -91,8 +91,8 @@ const Contact = () => {
           <br />
           United States
           <br />
-          12815 Burning Log Ln <br />
-          Plano, Texas 75243 <br />
+          
+          Dallas, Texas <br />
           <br />
           <span>tarasglushko2004@gmail.com</span>
         </div>

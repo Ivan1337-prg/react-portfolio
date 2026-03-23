@@ -1,5 +1,5 @@
 import './App.scss';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './components/Home';
 import About from './components/About';
@@ -7,17 +7,16 @@ import Contact from './components/Contact';
 
 function App() {
   return (
-    <Router basename="/">
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
-          {/* Fallback route for unmatched paths */}
-          <Route path="*" element={<Home />} />
-        </Route>
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Navigate to="/home" replace />} />
+        <Route path="home" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
+        {/* Fallback route for unmatched paths */}
+        <Route path="*" element={<Navigate to="/home" replace />} />
+      </Route>
+    </Routes>
   );
 }
 
