@@ -12,6 +12,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "animate.css": "^4.1.1",
+    "aws-amplify": "^6.16.3",
     "bootstrap": "^5.3.8",
     "gsap-trial": "^3.12.5",
     "loaders.css": "^0.1.2",
@@ -51,7 +52,14 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1"
+    "@aws-amplify/backend": "^1.22.0",
+    "@aws-amplify/backend-cli": "^1.8.2",
+    "aws-cdk-lib": "^2.234.1",
+    "constructs": "^10.6.0",
+    "esbuild": "^0.28.0",
+    "gh-pages": "^6.1.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
   },
   "homepage": "."
 }
